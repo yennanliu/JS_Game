@@ -29,6 +29,7 @@
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
+    document.addEventListener("touchmove", touchmoveMoveHandler, false);
     function keyDownHandler(e) {
         if(e.keyCode == 39) {
             rightPressed = true;
@@ -51,6 +52,13 @@
             paddleX = relativeX - paddleWidth/2;
         }
     }
+    function touchmoveMoveHandler(e) {
+        var relativeX = e.clientX - canvas.offsetLeft;
+        if(relativeX > 0 && relativeX < canvas.width) {
+            paddleX = relativeX - paddleWidth/2;
+        }
+    }
+
     function collisionDetection() {
         for(var c=0; c<brickColumnCount; c++) {
             for(var r=0; r<brickRowCount; r++) {

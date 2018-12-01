@@ -2,7 +2,8 @@
 collections of fun JS games
 
 # Game 
-- Floating box - https://yennj12.js.org/JS_Game/
+- Demo game - https://yennj12.js.org/JS_Game/
+- Floating box - https://yennj12.js.org/JS_Game/floating_box/game.html
 
 
 ## Ref

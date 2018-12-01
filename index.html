@@ -16,6 +16,7 @@ canvas {
 <body onload="startGame()">
 <script src="game.js"></script>
 <br>
+<!-- make it works both on WEB (onmousedown, onmouseup )  and Mobile (ontouchstart, ontouchend) -->
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 <p ontouchstart="accelerate(-0.2)" ontouchend="accelerate(0.05)">TOUCH ME!</p>
 <p>* Web    : Use the ACCELERATE button to stay in the air ✈️ (i.e. make the box "floating")</p>

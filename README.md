@@ -16,4 +16,7 @@ Collections of fun JS game APPs
 ## TODO 
 - Tensorflow.js train the game - https://js.tensorflow.org/
 - Gym train the game - https://gym.openai.com/
-- Develop a music/ Racing car game 
+- Develop a music/ Racing car game
+- Chrome Dinosaur game with AI  
+	- https://github.com/Dewep/T-Rex-s-neural-network
+	- https://github.com/Ashwin-Dhakal/AI-for-Chrome-Dinosaur-Game

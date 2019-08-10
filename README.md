@@ -5,15 +5,23 @@ Collections of fun JS game APPs
 - Demo game - https://yennj12.js.org/JS_Game/
 - Floating box - https://yennj12.js.org/JS_Game/floating_box/game.html
 - Breakout clone - https://yennj12.js.org/JS_Game/breakout_clone/index.html
+- T-rex runner - https://yennj12.js.org/JS_Game/t_rex_runner/index.html
+
+## Quick start
+- dev 
+
+## Development 
+- dev 
 
 ## Ref
 - w3schools HTML game  
 	- https://www.w3schools.com/graphics/game_intro.asp
 - Gamedev-Canvas-workshop
 	- https://github.com/end3r/Gamedev-Canvas-workshop
-
+- Tensorflow.js 
+	- https://js.tensorflow.org/
+	
 ## TODO 
-- Tensorflow.js train the game - https://js.tensorflow.org/
 - Gym train the game - https://gym.openai.com/
 - Develop a music/ Racing car game
 - Chrome Dinosaur game with AI  

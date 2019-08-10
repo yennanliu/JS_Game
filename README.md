@@ -1,9 +1,10 @@
-# JS_Game
+# [JS_Game](https://yennj12.js.org/JS_Game/)
 Collections of fun JS game APPs 
 
 ## Game 
-- Demo game - https://yennj12.js.org/JS_Game/
+- GAME LIST - https://yennj12.js.org/JS_Game/
 - Floating box - https://yennj12.js.org/JS_Game/floating_box/game.html
+- Floating box gravity -https://yennj12.js.org/JS_Game/floating_box_gravity/index.html
 - Breakout clone - https://yennj12.js.org/JS_Game/breakout_clone/index.html
 - T-rex runner - https://yennj12.js.org/JS_Game/t_rex_runner/index.html
 
@@ -20,7 +21,7 @@ Collections of fun JS game APPs
 	- https://github.com/end3r/Gamedev-Canvas-workshop
 - Tensorflow.js 
 	- https://js.tensorflow.org/
-	
+
 ## TODO 
 - Gym train the game - https://gym.openai.com/
 - Develop a music/ Racing car game

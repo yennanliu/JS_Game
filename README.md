@@ -6,7 +6,6 @@ Collections of fun JS game APPs
 - Floating box - https://yennj12.js.org/JS_Game/floating_box/game.html
 - Breakout clone - https://yennj12.js.org/JS_Game/breakout_clone/index.html
 
-
 ## Ref
 - w3schools HTML game  
 	- https://www.w3schools.com/graphics/game_intro.asp
@@ -20,3 +19,5 @@ Collections of fun JS game APPs
 - Chrome Dinosaur game with AI  
 	- https://github.com/Dewep/T-Rex-s-neural-network
 	- https://github.com/Ashwin-Dhakal/AI-for-Chrome-Dinosaur-Game
+	- https://github.com/wayou/t-rex-runner
+	- https://heartbeat.fritz.ai/automating-chrome-dinosaur-game-part-1-290578f13907

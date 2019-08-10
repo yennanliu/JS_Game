@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Float Box</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body onload="startGame()">
+<script src="game.js"></script>
+<br>
+<!-- make it works both on WEB (onmousedown, onmouseup )  and Mobile (ontouchstart, ontouchend) -->
+<!--<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button> -->
+<!-- <p ontouchstart="accelerate(-0.2)" ontouchend="accelerate(0.05)">TOUCH ME!</p> --> 
+<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)" ontouchstart="accelerate(-0.2)" ontouchend="accelerate(0.05)">ACCELERATE</button>
+
+<p>* Press the ACCELERATE button 🖕 to stay in air ✈️ (i.e. make the box "floating")</p>
+<p>* How long can you survive 🤣 ?</p>
+</body>
+</html>

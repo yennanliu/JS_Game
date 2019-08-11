@@ -21,6 +21,7 @@ Collections of fun JS game APPs
 	- https://github.com/end3r/Gamedev-Canvas-workshop
 - Tensorflow.js 
 	- https://js.tensorflow.org/
+	- https://codelabs.developers.google.com/
 
 ## TODO 
 - Gym train the game - https://gym.openai.com/

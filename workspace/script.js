@@ -6,6 +6,9 @@ function createModel() {
   // Add a single hidden layer
   model.add(tf.layers.dense({inputShape: [1], units: 1, useBias: true}));
   
+  // Add some hidden layers 
+  //model.add(tf.layers.dense({units: 50, activation: 'sigmoid'}));
+
   // Add an output layer
   model.add(tf.layers.dense({units: 1, useBias: true}));
 
@@ -164,7 +167,7 @@ async function run() {
   const tensorData = convertToTensor(data);
   const {inputs, labels} = tensorData;
     
-  // Train the model  
+  // Train the model   
   await trainModel(model, inputs, labels);
   console.log('Done Training');
   // Test the model 

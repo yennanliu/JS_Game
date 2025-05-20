@@ -25,8 +25,36 @@ function generateMaze() {
 
 function solveMaze() {
     solutionPath = [];
-    // Implement maze-solving logic (e.g., DFS, BFS, A*)
-    // ...
+
+    // Implement a simple Depth-First Search (DFS) to solve the maze
+    function dfs(row, col, visited) {
+        if (row < 0 || col < 0 || row >= rows || col >= cols || maze[row][col] === 1 || visited[row][col]) {
+            return false;
+        }
+
+        visited[row][col] = true;
+        solutionPath.push([row, col]);
+
+        // Check if we reached the bottom-right corner (goal)
+        if (row === rows - 1 && col === cols - 1) {
+            return true;
+        }
+
+        // Explore neighbors: down, right, up, left
+        if (dfs(row + 1, col, visited) || dfs(row, col + 1, visited) || dfs(row - 1, col, visited) || dfs(row, col - 1, visited)) {
+            return true;
+        }
+
+        // Backtrack if no solution found
+        solutionPath.pop();
+        return false;
+    }
+
+    const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
+    if (!dfs(0, 0, visited)) {
+        alert('No solution found for the maze!');
+    }
+
     drawSolution();
 }
 

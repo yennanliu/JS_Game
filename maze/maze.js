@@ -10,17 +10,37 @@ let maze = [];
 let solutionPath = [];
 
 function generateMaze() {
-    maze = Array.from({ length: rows }, () => Array(cols).fill(0));
+    maze = Array.from({ length: rows }, () => Array(cols).fill(1)); // Start with all walls
 
-    // Simple maze generation logic (e.g., recursive backtracking)
+    // Ensure the maze has a simple solution by carving a straightforward path from start to end
+    let currentRow = 0;
+    let currentCol = 0;
+    while (currentRow < rows - 1 || currentCol < cols - 1) {
+        maze[currentRow][currentCol] = 0; // Mark the cell as part of the path
+
+        if (currentRow === rows - 1) {
+            currentCol++; // Move right if at the bottom row
+        } else if (currentCol === cols - 1) {
+            currentRow++; // Move down if at the rightmost column
+        } else if (Math.random() > 0.5) {
+            currentRow++; // Randomly move down
+        } else {
+            currentCol++; // Randomly move right
+        }
+    }
+    maze[currentRow][currentCol] = 0; // Mark the goal cell as part of the path
+
+    // Add fewer random walls to make the maze simpler
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
-            maze[row][col] = Math.random() > 0.7 ? 1 : 0; // Randomly generate walls
+            if (maze[row][col] !== 0) {
+                maze[row][col] = Math.random() > 0.85 ? 1 : 0; // Fewer walls
+            }
         }
     }
 
+    drawMaze(); // Ensure the maze is drawn immediately after generation
     saveMazeToLocalStorage();
-    drawMaze();
 }
 
 function solveMaze() {

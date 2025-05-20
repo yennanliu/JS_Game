@@ -116,6 +116,53 @@ function updateMazeHistoryDropdown() {
     });
 }
 
+// Add a new button for saving the maze
+const saveButton = document.createElement('button');
+saveButton.id = 'saveMaze';
+saveButton.textContent = 'Save Maze';
+document.body.appendChild(saveButton);
+
+// Add event listener for saving the maze
+saveButton.addEventListener('click', () => {
+    const savedMazes = JSON.parse(localStorage.getItem('savedMazes')) || [];
+    savedMazes.push(maze);
+    localStorage.setItem('savedMazes', JSON.stringify(savedMazes));
+    alert('Maze saved successfully!');
+});
+
+// Add a dropdown to load saved mazes
+const loadDropdown = document.createElement('select');
+loadDropdown.id = 'loadMaze';
+loadDropdown.innerHTML = '<option value="">Load a saved maze</option>';
+document.body.appendChild(loadDropdown);
+
+// Populate the dropdown with saved mazes
+function updateLoadDropdown() {
+    const savedMazes = JSON.parse(localStorage.getItem('savedMazes')) || [];
+    const loadDropdown = document.getElementById('loadMaze');
+    if (!loadDropdown) return; // Ensure the dropdown exists
+
+    loadDropdown.innerHTML = '<option value="">Load a saved maze</option>';
+    savedMazes.forEach((_, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = `Saved Maze ${index + 1}`;
+        loadDropdown.appendChild(option);
+    });
+}
+
+// Add event listener for loading a saved maze
+loadDropdown.addEventListener('change', (e) => {
+    const savedMazes = JSON.parse(localStorage.getItem('savedMazes')) || [];
+    const selectedMaze = savedMazes[e.target.value];
+    if (selectedMaze) {
+        maze = selectedMaze;
+        drawMaze();
+    }
+});
+
+updateLoadDropdown();
+
 document.getElementById('generateMaze').addEventListener('click', generateMaze);
 document.getElementById('solveMaze').addEventListener('click', solveMaze);
 document.getElementById('mazeHistory').addEventListener('change', (e) => {
